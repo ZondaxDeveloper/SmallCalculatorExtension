@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Calculadora",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Una calculadora básica en una extensión de Chrome",
     "action": {
       "default_popup": "popup.html",

@@ -25,6 +25,9 @@ function appendToResult(value) {
   function evalExpression(expression) {
     let operator = '';
     let operands = expression.split(/([+\-*/])/);
+
+    expression = expression.replace(/pi/g, Math.PI);
+    expression = expression.replace(/e/g, Math.E);
   
     let result = parseFloat(operands[0]);
   
@@ -124,6 +127,12 @@ function appendToResult(value) {
   
     document.getElementById("btn-add").addEventListener("click", function () {
       appendToResult("+");
+    });
+    document.getElementById("btn-pi").addEventListener("click", function () {
+      appendToResult("3.14");
+    });
+    document.getElementById("btn-eu").addEventListener("click", function () {
+      appendToResult("2.71");
     });
   
     document.getElementById("btn-clear").addEventListener("click", clearResult);
